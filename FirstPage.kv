@@ -58,6 +58,7 @@
                 line_color_focus:rgba(140,82,255,255)
                 fill_color_normal: 58/255,62/255,99/255,255/255
                 fill_color_focus: 58/255,62/255,99/255,255/255
+                
             GridLayout:
                 cols: 3
                 spacing: 20
@@ -74,30 +75,10 @@
                         font_name: 'SpaceMonoR'
                         size_hint: 1,1
                         padding: [10, 10]
-                        
-                    MDFillRoundFlatButton:
-                        text: 'asin'
-                        on_release: root.add_to_expression('asin(')
-                        text_color: "grey" 
-                        md_bg_color: 1,1,1,1
-                        font_size: '25sp'
-                        font_name: 'SpaceMonoR'
-                        size_hint: 1,1
-                        padding: [10, 10]
                     
                     MDFillRoundFlatButton:
                         text: 'cos'
                         on_release: root.add_to_expression('cos(')
-                        text_color: "grey" 
-                        md_bg_color: 1,1,1,1
-                        font_size: '25sp'
-                        font_name: 'SpaceMonoR'
-                        size_hint: 1,1
-                        padding: [10, 10]
-
-                    MDFillRoundFlatButton:
-                        text: 'acos'
-                        on_release: root.add_to_expression('acos(')
                         text_color: "grey" 
                         md_bg_color: 1,1,1,1
                         font_size: '25sp'
@@ -116,15 +97,6 @@
                         size_hint: 1,1
                         padding: [10, 10]
 
-                    MDFillRoundFlatButton:
-                        text: 'atan'
-                        on_release: root.add_to_expression('atan(')
-                        text_color: "grey" 
-                        md_bg_color: 1,1,1,1
-                        font_size: '25sp'
-                        font_name: 'SpaceMonoR'
-                        size_hint: 1,1
-                        padding: [10, 10]
                     MDFillRoundFlatButton:
                         text: '^'
                         on_release: root.add_to_expression('^')
@@ -362,6 +334,4 @@
                         size_hint: 1,1
                         padding: [10, 10]
 
-                
-
-            
+           

@@ -27,4 +27,6 @@ if __name__ == "__main__":
     LabelBase.register(name="SPoppins", fn_regular="Poppins-Regular.ttf")
     LabelBase.register(name="MPoppins", fn_regular="Poppins-Bold.ttf")
     LabelBase.register(name="LPoppins", fn_regular="Poppins-Light.ttf")
+    LabelBase.register(name="SpaceMonoB", fn_regular="SpaceMono-Bold.ttf")
+    LabelBase.register(name="SpaceMonoR", fn_regular="SpaceMono-Regular.ttf")
     NR().run()

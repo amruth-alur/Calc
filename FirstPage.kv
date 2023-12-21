@@ -12,11 +12,11 @@
         font_size: "67sp"
         pos_hint: {"center_x": .179, "center_y": .5}
         halign: "center"
-        color: 1,1,1,1 
+        color: rgba(140,82,255,255) 
     
     MDLabel:
         text: "Simplify Your Math"
-        font_name: "LPoppins"
+        font_name: "SPoppins"
         font_size: "28sp"
         pos_hint: {"center_x": .1475, "center_y": .43}
         halign: "center"
@@ -24,7 +24,7 @@
     
     MDLabel:
         text: "Expressions with Ease"
-        font_name: "LPoppins"
+        font_name: "SPoppins"
         font_size: "28sp"
         pos_hint: {"center_x": .1618, "center_y": .39}
         halign: "center"
@@ -34,7 +34,7 @@
         size_hint: None, None
         size: "750dp", "600dp"
         pos_hint: {'center_x': 0.7, 'center_y': 0.48}
-        elevation: 2
+        elevation: 2.8
         md_bg_color: 255/255,255/255,255/255,255/255
         radius: [40,40,40,40]
 
@@ -42,18 +42,18 @@
             orientation: 'vertical'
             padding: 50
             spacing: 40
-            
 
             MDTextField:
                 id: input_field
                 text: root.expression
+                font_name: 'SpaceMonoB'
                 height: "50dp"
                 pos_hint: {"center_x": .5, "center_y": .5}
                 font_size: '60sp'
-                multiline: True
+                multiline: False
                 color_mode: 'accent'  
-                text_color_normal:1,1,1,1
-                text_color_focus:1,1,1,1
+                text_color_normal:0,0,0,1
+                text_color_focus:0,0,0,1
                 line_color_normal:rgba(140,82,255,255)
                 line_color_focus:rgba(140,82,255,255)
                 fill_color_normal: 58/255,62/255,99/255,255/255
@@ -68,202 +68,225 @@
                     MDFillRoundFlatButton:
                         text: 'sin'
                         on_release: root.add_to_expression('sin(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
-                        font_size: '20sp'
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
                         padding: [10, 10]
                         
-
-                    MDFillRoundFlatButton:
-                        text: 'cos'
-                        on_release: root.add_to_expression('cos(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
-                        font_size: '20sp'
-                        size_hint: 1,1
-                        padding: [10, 10]
-
-                    MDFillRoundFlatButton:
-                        text: 'tan'
-                        on_release: root.add_to_expression('tan(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
-                        size_hint: 1,1
-                        font_size: '20sp'
-                        padding: [10, 10]
-                    
-                    MDFillRoundFlatButton:
-                        text: '^'
-                        on_release: root.add_to_expression('^')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
-                        font_size: '20sp'
-                        size_hint: 1,1
-                        padding: [10, 10]
-
                     MDFillRoundFlatButton:
                         text: 'asin'
                         on_release: root.add_to_expression('asin(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
+                        padding: [10, 10]
+                    
+                    MDFillRoundFlatButton:
+                        text: 'cos'
+                        on_release: root.add_to_expression('cos(')
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
+                        size_hint: 1,1
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: 'acos'
                         on_release: root.add_to_expression('acos(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
+                        padding: [10, 10]
+                    
+
+                    MDFillRoundFlatButton:
+                        text: 'tan'
+                        on_release: root.add_to_expression('tan(')
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
+                        size_hint: 1,1
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: 'atan'
                         on_release: root.add_to_expression('atan(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
+                    MDFillRoundFlatButton:
+                        text: '^'
+                        on_release: root.add_to_expression('^')
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
+                        size_hint: 1,1
+                        padding: [10, 10]
+
 
                     MDFillRoundFlatButton:
                         text: 'π'
                         on_release: root.add_to_expression('pi')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
+
                     MDFillRoundFlatButton:
                         text: '√'
                         on_release: root.add_to_expression('sqrt(')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: 'log'
                         on_release: root.add_to_expression('log(10,')
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '25sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                 GridLayout:
                     cols: 3
                     spacing: 10
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '1'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
-                        size_hint: 1,1  
-                        font_size: '20sp'  
+                        text_color: "black"
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
+                        size_hint: 1,1
                         padding: [10, 10]
-                        border: [100,30,30,30]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '2'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black"
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '3'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black"
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '4'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color:"black"
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '5'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '6'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
                     
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '7'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '8'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '9'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color:"black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '0'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
                     
-                    MDRectangleFlatButton:
+                    MDFillRoundFlatButton:
                         text: '.'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
-                    MDRectangleFlatButton:
+
+                    MDFillRoundFlatButton:
                         text: 'AC'
                         on_release: root.clear_expression()
-                        text_color: "white" 
-                        md_bg_color: rgba(85, 0, 255,255)
+                        text_color: "black" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '40sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                 GridLayout:
@@ -272,64 +295,71 @@
                     MDFillRoundFlatButton:
                         text: '+'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: '-'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: '('
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: '*'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: ')'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                     MDFillRoundFlatButton:
                         text: '/'
                         on_release: root.add_to_expression(self.text)
-                        text_color: "white" 
-                        md_bg_color: rgba(140,82,255,255)
+                        text_color: "grey" 
+                        md_bg_color: 1,1,1,1
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
-                    MDFillRoundFlatButton:
+                    MDRectangleFlatButton:
                         text: '='
                         on_release: root.calculate()
-                        text_color: "white" 
-                        md_bg_color: rgba(85, 0, 255,255)
+                        text_color: 1,1,1,1  
+                        md_bg_color: rgba(140,82,255,255) 
+                        font_size: '30sp'
+                        font_name: 'SpaceMonoR'
                         size_hint: 1,1
-                        font_size: '20sp'
                         padding: [10, 10]
 
                 

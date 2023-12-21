@@ -1,7 +1,6 @@
 from kivy.uix.screenmanager import ScreenManager, Screen
 import sympy as sp
 from kivy.properties import StringProperty
-import re
 
 class FirstPage(Screen):
     expression = StringProperty()
@@ -15,14 +14,15 @@ class FirstPage(Screen):
     def calculate(self):
         try:
             expr = self.expression
-
-            # Replace text with sympy trigonometric functions
-            expr = expr.replace('sin', 'sp.sin')
-            expr = expr.replace('cos', 'sp.cos')
-            expr = expr.replace('tan', 'sp.tan')
+            # Replace inverse trigonometric functions first
             expr = expr.replace('asin', 'sp.asin')
             expr = expr.replace('acos', 'sp.acos')
             expr = expr.replace('atan', 'sp.atan')
+
+            # Then replace trigonometric functions
+            expr = expr.replace('sin', 'sp.sin')
+            expr = expr.replace('cos', 'sp.cos')
+            expr = expr.replace('tan', 'sp.tan')
 
             # Handle exponent (^)
             expr = expr.replace('^', '**')

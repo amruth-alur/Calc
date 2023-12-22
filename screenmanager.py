@@ -25,7 +25,7 @@ class FirstPage(Screen):
             expr = expr.replace('pi', 'sp.pi')
 
             expr = expr.replace('sqrt', 'sp.sqrt')
-            expr = expr.replace('root', 'sp.root')
+            
             expr = expr.replace('log', 'sp.log')
             
             x = sp.symbols('x')

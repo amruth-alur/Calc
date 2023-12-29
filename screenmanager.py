@@ -3,7 +3,13 @@ import sympy as sp
 from kivy.properties import StringProperty
 
 class FirstPage(Screen):
-	@@ -18,8 +13,31 @@ def clear_expression(self):
+    expression = StringProperty()
+
+    def add_to_expression(self, value):
+        self.expression += str(value)
+
+    def clear_expression(self):
+        self.expression = ""
 
     def calculate(self):
         try:
@@ -21,10 +27,10 @@ class FirstPage(Screen):
             expr = expr.replace('sqrt', 'sp.sqrt')
             expr = expr.replace('root', 'sp.root')
             expr = expr.replace('log', 'sp.log')
-
+            
             x = sp.symbols('x')
             result = eval(expr, {"sp": sp, "x": x})
-
+            
             # If the result is a sympy object, convert it to a float
             if isinstance(result, sp.Basic):
                 result = float(result.evalf())
@@ -35,3 +41,4 @@ class FirstPage(Screen):
             self.expression = "Error"
 
 class MainScreenManager(ScreenManager):
+    pass
